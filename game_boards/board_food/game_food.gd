@@ -31,6 +31,9 @@ func on_board_match_multi(match_cnt:int):
 	if match_cnt >= 2:
 		animation_player.play("show_msg_amazing")
 
+func init_game():
+	game_board.init_game()
+
 func _on_newgame_button_pressed():
 	game_board.new_game()
 

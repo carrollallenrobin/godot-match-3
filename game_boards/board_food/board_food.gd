@@ -25,12 +25,22 @@ var board_props_score:int = 0
 func _ready():
 	# godot setup
 	randomize()
-	# A: populate board
+	# A: populate board squares only. Gems are filled in init_game() after the
+	# board is visible; filling while the parent is hidden leaves an empty board on web.
 	const brd_sq0 = "res://game_boards/board_food/assets/board_square_0.tscn"
 	const brd_sq1 = "res://game_boards/board_food/assets/board_square_1.tscn"
 	CmnFunc.fill_grid(hbox_container, grid_container, brd_sq0, brd_sq1)
+
+func init_game():
+	# Give the engine a frame after the board is shown so the columns have a size.
+	call_deferred("init_game2")
+
+func init_game2():
+	for vbox in hbox_container.get_children():
+		for cell in vbox.get_children():
+			vbox.remove_child(cell)
+			cell.queue_free()
 	CmnFunc.fill_hbox(hbox_container, Enums.GemDict.FOOD, self._on_cell_click)
-	# B: check board after init
 	process_game_round()
 
 func new_game():

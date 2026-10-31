@@ -27,12 +27,12 @@ const gem_textures_food: Dictionary = {
 	Enums.GemColor.PRP: preload("res://assets/gems/food/characters_0006.png")
 }
 const gem_textures_gems: Dictionary = {
-	Enums.GemColor.RED: preload("res://assets/gems/gems/gem1.png"),
-	Enums.GemColor.ORG: preload("res://assets/gems/gems/gem2.png"),
-	Enums.GemColor.YLW: preload("res://assets/gems/gems/gem3.png"),
-	Enums.GemColor.GRN: preload("res://assets/gems/gems/gem4.png"),
-	Enums.GemColor.BLU: preload("res://assets/gems/gems/gem5.png"),
-	Enums.GemColor.PRP: preload("res://assets/gems/gems/gem6.png")
+	Enums.GemColor.RED: preload("res://assets/gems/gems/Gem1.png"),
+	Enums.GemColor.ORG: preload("res://assets/gems/gems/Gem2.png"),
+	Enums.GemColor.YLW: preload("res://assets/gems/gems/Gem3.png"),
+	Enums.GemColor.GRN: preload("res://assets/gems/gems/Gem4.png"),
+	Enums.GemColor.BLU: preload("res://assets/gems/gems/Gem5.png"),
+	Enums.GemColor.PRP: preload("res://assets/gems/gems/Gem6.png")
 }
 const gem_textures_space: Dictionary = {
 	Enums.GemColor.RED: preload("res://assets/gems/space/Space_R.png"),
